@@ -1,183 +1,182 @@
 [
-    {
-        "id": 0,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 1,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 9,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 10,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    },
-    {
-        "id": 11,
-        "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-        "username": "2ytka2",
-        "posts": [
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            },
-            {
-                "title": "Good morning",
-                "text": "123123123 text"
-            }
-        ]
-    }
-    
+  {
+    "id": 0,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "Gabonskiy",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "asq",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  }
 ]

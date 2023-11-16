@@ -1,7 +1,6 @@
 <template>
   <component :is="name" />
 </template>
-
 <script lang="ts">
 import * as icons from "./variants";
 export default {

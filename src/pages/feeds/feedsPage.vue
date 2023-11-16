@@ -4,9 +4,11 @@
       <Header :avatarUrl="loginnedUser.avatarUrl"></Header>
     </template>
     <template #content>
-      <div class="icon">
-        <Icon name="home" />
-      </div>
+      <ul class="stories__list">
+        <li class="stories__item" v-for="user in dbUsers" :key="user">
+          <StoryItem :userInfo="user" />
+        </li>
+      </ul>
     </template>
   </Topline>
 </template>
@@ -14,7 +16,7 @@
 import { Topline } from "../../components/topline";
 import { Header } from "../../components/Header";
 import dbUsers from "./dbUsers.json";
-import { Icon } from "../../components/icons";
+import { StoryItem } from "../../components/StoryItem";
 
 export default {
   name: "feeds",
@@ -32,7 +34,7 @@ export default {
   components: {
     Topline,
     Header,
-    Icon,
+    StoryItem,
   },
 };
 </script>
