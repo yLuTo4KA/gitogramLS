@@ -5,11 +5,21 @@
     "username": "2ytka2",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
-        "title": "Good morning",
+        "title": "Good morning2",
         "text": "123123123 text"
       }
     ]
@@ -17,11 +27,21 @@
   {
     "id": 1,
     "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-    "username": "Gabonskiy",
+    "username": "bob",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "React.js",
+        "text": "Open source JavaScript library used for designing user interfaces",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "Gleb_01", "text": "transition-group with flex parent causes removed items to fly"},
+          {"id": 0, "username": "Maks22", "text": "transition-group with flex parent causes removed items to fly"},
+          {"id": 0, "username": "__Alek__", "text": "transition-group with flex parent causes removed items to fly "}
+        ]
       },
       {
         "title": "Good morning",
@@ -32,11 +52,21 @@
   {
     "id": 2,
     "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-    "username": "asq",
+    "username": "morph",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",
@@ -47,11 +77,21 @@
   {
     "id": 3,
     "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-    "username": "2ytka2",
+    "username": "bib",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",
@@ -62,11 +102,21 @@
   {
     "id": 4,
     "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-    "username": "2ytka2",
+    "username": "hock",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",
@@ -77,11 +127,21 @@
   {
     "id": 5,
     "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
-    "username": "2ytka2",
+    "username": "hank",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",
@@ -95,8 +155,18 @@
     "username": "2ytka2",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",
@@ -110,8 +180,18 @@
     "username": "2ytka2",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",
@@ -125,8 +205,18 @@
     "username": "2ytka2",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",
@@ -140,8 +230,18 @@
     "username": "2ytka2",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",
@@ -155,8 +255,18 @@
     "username": "2ytka2",
     "posts": [
       {
-        "title": "Good morning",
-        "text": "123123123 text"
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",
@@ -170,8 +280,68 @@
     "username": "2ytka2",
     "posts": [
       {
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
+      },
+      {
         "title": "Good morning",
         "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
+      },
+      {
+        "title": "Good morning",
+        "text": "123123123 text"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "avatar": "https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg",
+    "username": "2ytka2",
+    "posts": [
+      {
+        "title": "Vue.js",
+        "text": "JavaScript framework for building interactive web applications ⚡",
+        "date": "19 NOVEMBER",
+        "stats": {
+          "stars": 33,
+          "forks": 4
+        },
+        "issues": [
+          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+        ]
       },
       {
         "title": "Good morning",

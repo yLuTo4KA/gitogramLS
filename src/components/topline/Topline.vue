@@ -10,3 +10,8 @@
     </div>
   </div>
 </template>
+<style lang="scss" scoped>
+.c-topline {
+  background-color: #fafafa;
+}
+</style>

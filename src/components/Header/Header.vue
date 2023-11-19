@@ -12,7 +12,7 @@
         </li>
         <li class="header__nav-item">
           <button class="header__btn header__btn--avatar">
-            <Avatar :avatarUrl="none" />
+            <Avatar :avatarUrl="avatarUrl" />
           </button>
         </li>
         <li class="header__nav-item">
