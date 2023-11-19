@@ -13,9 +13,14 @@
           "forks": 4
         },
         "issues": [
-          {"id": 0, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
-          {"id": 0, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
-          {"id": 0, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+          {"id": 1, "username": "John", "text": "Enable performance measuring in production, at the user's request"},
+          {"id": 2, "username": "Morgan", "text": "It's Impossible to Rename an Inherited Slot"},
+          {"id": 3, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"},
+          {"id": 4, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"},
+          {"id": 5, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"},
+          {"id": 6, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"},
+          {"id": 7, "username": "Alex", "text": "transition-group with flex parent causes removed items to fly"}
+
         ]
       },
       {

@@ -3,14 +3,22 @@
     <Toggler togglerText="issues" @toggle="toggle" />
     <div class="comments" v-if="shown">
       <ul class="comments__list">
-        <li
-          class="comments__item"
-          v-for="comment in comments"
-          :key="comment.id"
-        >
-          <Comment :comment="comment" />
-        </li>
+        <template v-for="comment in comments" :key="comment.id"
+          ><li class="comments__item" v-if="comment.id <= this.shownCount">
+            <Comment :comment="comment" /></li
+        ></template>
       </ul>
+      <button
+        class="comments__show"
+        v-if="comments.length > 3"
+        @click="showAll"
+      >
+        {{
+          this.shownCount == 3
+            ? "Show all " + (comments.length - 1) + " issues"
+            : "Hide issues"
+        }}
+      </button>
     </div>
   </div>
 </template>
@@ -23,6 +31,7 @@ export default {
   data() {
     return {
       shown: false,
+      shownCount: 3,
     };
   },
   components: {
@@ -36,6 +45,9 @@ export default {
     toggle(isOpened) {
       this.shown = isOpened;
     },
+    showAll() {
+      this.shownCount = this.shownCount == 3 ? this.comments.length - 1 : 3;
+    },
   },
 };
 </script>
@@ -47,7 +59,11 @@ export default {
       flex-direction: column;
     }
     &__item {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+    }
+    &__show {
+      color: #9e9e9e;
+      font-size: 14px;
     }
   }
 }
