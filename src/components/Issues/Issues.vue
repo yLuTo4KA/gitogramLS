@@ -15,7 +15,7 @@
       >
         {{
           this.shownCount == 3
-            ? "Show all " + (comments.length - 1) + " issues"
+            ? "Show all " + comments.length + " issues"
             : "Hide issues"
         }}
       </button>
@@ -46,7 +46,7 @@ export default {
       this.shown = isOpened;
     },
     showAll() {
-      this.shownCount = this.shownCount == 3 ? this.comments.length - 1 : 3;
+      this.shownCount = this.shownCount == 3 ? this.comments.length : 3;
     },
   },
 };

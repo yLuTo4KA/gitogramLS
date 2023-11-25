@@ -24,6 +24,12 @@ npm run build
 npm run lint
 ```
 
+### Fix Eslint
+
+```
+npx prettier --write .
+```
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).

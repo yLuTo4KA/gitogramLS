@@ -47,9 +47,13 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 48px 0;
+
   &__logo {
     width: 175px;
     color: #292929;
+    @media (max-width: 376px) {
+      width: 100px;
+    }
   }
   &__nav {
     &-item {
@@ -60,10 +64,15 @@ export default {
     }
   }
   &__btn {
-    width: 37px;
-    height: 37px;
-    &--avatar {
-      border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    @media (max-width: 768px) {
+      width: 37px;
+      height: 37px;
+    }
+    @media (max-width: 376px) {
+      width: 24px;
+      height: 24px;
     }
   }
 }

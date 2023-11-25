@@ -24,11 +24,14 @@ export default {
 .avatar {
   border-radius: 50%;
   overflow: hidden;
+  width: 40px;
+  height: 40px;
   & img {
     width: 100%;
     height: 100%;
     display: block;
     border-radius: 50%;
+    object-fit: cover;
   }
 }
 .stories {
@@ -39,11 +42,15 @@ export default {
   transition: border 0.1s;
   margin-bottom: 10px;
   &:hover {
-    border: none;
+    border: 0px;
   }
 }
 .posts {
   width: 44px;
   height: 44px;
+}
+.slide {
+  width: 32px;
+  height: 32px;
 }
 </style>

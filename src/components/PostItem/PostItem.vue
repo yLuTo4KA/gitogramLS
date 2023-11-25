@@ -1,15 +1,19 @@
 <template>
   <div class="post">
     <div class="post__user">
-      <User :userInfo="user" vClass="posts" />
+      <User
+        :username="postData.username"
+        :avatarUrl="postData.avatarUrl"
+        vClass="posts"
+      />
     </div>
     <div class="post__content">
       <slot name="repository" />
     </div>
-    <div class="post__issues" v-if="user.posts[0].issues">
-      <Issues :comments="user.posts[0].issues" />
+    <div class="post__issues" v-if="postData.issues">
+      <Issues :comments="postData.issues" />
     </div>
-    <time datetime="" class="post__date">{{ user.posts[0].date }}</time>
+    <time datetime="" class="post__date">{{ postData.postDate }}</time>
   </div>
 </template>
 <script lang="ts">
@@ -22,7 +26,7 @@ export default {
     Issues,
   },
   props: {
-    user: {
+    postData: {
       type: Object,
       required: true,
     },

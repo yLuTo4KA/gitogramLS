@@ -1,11 +1,11 @@
 <template>
   <div class="repository">
-    <h1 class="repository__title">{{ repository.title }}</h1>
+    <h1 class="repository__title">{{ repositoryData.title }}</h1>
     <div class="repository__desc">
-      <p>{{ repository.text }}</p>
+      <p>{{ repositoryData.text }}</p>
     </div>
     <div class="repository__controls">
-      <Controls :repoStats="repository.stats" />
+      <Controls :repoStats="repositoryData.stats" />
     </div>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
     Controls,
   },
   props: {
-    repository: {
+    repositoryData: {
       type: Object,
       required: true,
     },
@@ -30,6 +30,7 @@ export default {
   border: 1px solid #f1f1f1;
   box-shadow: 0px 4px 40px 0px #00000012;
   border-radius: 10px;
+  word-wrap: break-word;
   &__title {
     margin-bottom: 15px;
     font-size: 26px;

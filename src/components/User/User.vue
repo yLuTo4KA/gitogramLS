@@ -1,10 +1,10 @@
 <template>
   <div :class="['user', vClass]">
     <div class="user__avatar">
-      <Avatar :avatarUrl="userInfo.avatar" :vClass="vClass" />
+      <Avatar :avatarUrl="avatarUrl" :vClass="vClass" />
     </div>
     <div class="user__username">
-      <p>{{ userInfo.username }}</p>
+      <p>{{ username }}</p>
     </div>
   </div>
 </template>
@@ -16,8 +16,12 @@ export default {
     Avatar,
   },
   props: {
-    userInfo: {
-      type: Object,
+    username: {
+      type: String,
+      required: true,
+    },
+    avatarUrl: {
+      type: String,
       required: true,
     },
     vClass: {
@@ -29,11 +33,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .user {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-size: 12px;
   font-weight: 400;
   overflow: hidden;
+
   &.stories {
     flex-direction: column;
   }
@@ -44,6 +49,14 @@ export default {
     & .user__username {
       font-weight: bold;
       font-size: 18px;
+    }
+  }
+  &.slide-user {
+    & .user__avatar {
+      margin-right: 12px;
+    }
+    & .user__username {
+      font-weight: 700;
     }
   }
 }
