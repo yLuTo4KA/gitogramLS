@@ -63,7 +63,9 @@ export default {
     }
     &__show {
       color: #9e9e9e;
-      font-size: 14px;
+      @media screen and (max-width: 376px) {
+        font-size: 12px;
+      }
     }
   }
 }

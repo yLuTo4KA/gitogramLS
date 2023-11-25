@@ -47,6 +47,9 @@ export default {
     justify-content: center;
     align-items: center;
     font-size: 14px;
+    @media screen and (max-width: 376px) {
+      font-size: 12px;
+    }
     &.--active {
       .btn__icon {
         rotate: 180deg;

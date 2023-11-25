@@ -48,6 +48,9 @@ export default {
   &__date {
     font-size: 12px;
     color: #00000066;
+    @media screen and (max-width: 376px) {
+      font-size: 10px;
+    }
   }
 }
 </style>

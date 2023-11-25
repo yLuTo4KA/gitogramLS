@@ -13,7 +13,7 @@
       </div>
       <div class="btn__title --bold">Fork</div>
     </button>
-    <div class="btn__count">{{ repoStats.forks }}</div>
+    <div class="btn__count --bold">{{ repoStats.forks }}</div>
   </div>
 </template>
 <script lang="ts">
@@ -33,6 +33,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.--bold {
+  font-size: 12px;
+  font-weight: 600;
+  @media screen and (max-width: 376px) {
+    font-size: inherit;
+    font-weight: normal;
+  }
+}
 .controls {
   display: inline-flex;
   align-items: center;
@@ -40,6 +48,9 @@ export default {
   height: 28px;
   border-radius: 6px;
   border: 1px solid #1b1f232a;
+  @media screen and (max-width: 376px) {
+    font-size: 10px;
+  }
   .btn {
     display: flex;
     align-items: center;
@@ -51,6 +62,7 @@ export default {
     &:hover {
       .btn__icon {
         color: #31ae54;
+        background-color: #fafbfc;
       }
     }
     &:first-child {
@@ -60,11 +72,9 @@ export default {
       width: 16px;
       height: 16px;
       margin-right: 5px;
-    }
-    &__title {
-      &.--bold {
-        font-size: 12px;
-        font-weight: 600;
+      @media screen and (max-width: 376px) {
+        width: 10px;
+        height: 10px;
       }
     }
     &__count {

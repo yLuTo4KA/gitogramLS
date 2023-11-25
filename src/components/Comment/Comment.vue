@@ -18,7 +18,9 @@ export default {
 <style lang="scss" scoped>
 .comment {
   display: flex;
-  font-size: 14px;
+  @media screen and (max-width: 376px) {
+    font-size: 12px;
+  }
   &__username {
     font-weight: 700;
     margin-right: 10px;

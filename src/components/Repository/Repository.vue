@@ -35,10 +35,18 @@ export default {
     margin-bottom: 15px;
     font-size: 26px;
     font-weight: 700;
+    @media screen and (max-width: 376px) {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
   }
   &__desc {
     margin-bottom: 32px;
     font-size: 14px;
+    @media screen and (max-width: 376px) {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
   }
 }
 </style>

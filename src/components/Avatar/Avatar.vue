@@ -37,10 +37,14 @@ export default {
 .stories {
   border: 2px solid #a6328d;
   padding: 4px;
-  width: 80px;
-  height: 80px;
+  width: 92px;
+  height: 92px;
   transition: border 0.1s;
   margin-bottom: 10px;
+  @media screen and (max-width: 376px) {
+    width: 72px;
+    height: 72px;
+  }
   &:hover {
     border: 0px;
   }
@@ -48,6 +52,10 @@ export default {
 .posts {
   width: 44px;
   height: 44px;
+  @media screen and (max-width: 376px) {
+    width: 35px;
+    height: 35px;
+  }
 }
 .slide {
   width: 32px;

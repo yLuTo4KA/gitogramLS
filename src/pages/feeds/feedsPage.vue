@@ -8,7 +8,7 @@
         class="stories__list"
         :freeMode="true"
         :slides-per-view="'auto'"
-        :space-between="20"
+        :space-between="0"
         :modules="modules"
       >
         <SwiperSlide
@@ -123,14 +123,22 @@ export default {
 .stories__list {
   padding: 0 0 40px 0;
   overflow: hidden;
+  @media screen and (max-width: 376px) {
+    padding: 0 0 10px 0;
+  }
   .stories__item {
-    margin-right: 20px;
+    margin-right: 31px;
+    @media (max-width: 768px) {
+      margin-right: 15px;
+    }
+    @media screen and (max-width: 376px) {
+      margin-right: 10px;
+    }
     &:last-child {
       margin-right: 0;
     }
     & .user {
       flex-direction: column;
-      width: 80px;
     }
   }
 }

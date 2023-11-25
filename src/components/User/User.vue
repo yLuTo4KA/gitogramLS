@@ -45,10 +45,16 @@ export default {
   &.posts {
     & .user__avatar {
       margin-right: 15px;
+      @media screen and (max-width: 376px) {
+        margin-right: 10px;
+      }
     }
     & .user__username {
       font-weight: bold;
       font-size: 18px;
+      @media screen and (max-width: 376px) {
+        font-size: 16px;
+      }
     }
   }
   &.slide-user {
