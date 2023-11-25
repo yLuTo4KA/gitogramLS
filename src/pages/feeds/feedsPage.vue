@@ -4,15 +4,25 @@
       <Header :avatarUrl="loginnedUser.avatarUrl"></Header>
     </template>
     <template #content>
-      <ul class="stories__list">
-        <li class="stories__item" v-for="user in dbUsers" :key="user.id">
+      <Swiper
+        class="stories__list"
+        :freeMode="true"
+        :slides-per-view="'auto'"
+        :space-between="20"
+        :modules="modules"
+      >
+        <SwiperSlide
+          class="stories__item"
+          v-for="user in dbUsers"
+          :key="user.id"
+        >
           <User
             :username="user.username"
             :avatarUrl="user.avatar"
             vClass="stories"
           />
-        </li>
-      </ul>
+        </SwiperSlide>
+      </Swiper>
     </template>
   </Topline>
   <div class="repositories__section">
@@ -39,6 +49,11 @@ import { User } from "../../components/User";
 import * as api from "../../api";
 import { PostItem } from "../../components/PostItem";
 import { Repository } from "../../components/Repository";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { FreeMode } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/free-mode";
 export default {
   name: "feeds",
   data() {
@@ -59,6 +74,13 @@ export default {
     User,
     PostItem,
     Repository,
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [FreeMode],
+    };
   },
   methods: {
     getFeedData(item) {
@@ -94,6 +116,9 @@ export default {
 .icon {
   color: red;
   width: 30px;
+}
+.swiper-slide {
+  width: auto;
 }
 .stories__list {
   padding: 0 0 40px 0;
