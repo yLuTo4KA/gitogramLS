@@ -31,6 +31,11 @@ h6 {
 a {
   color: inherit;
 }
+svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 img {
   display: block;
