@@ -52,6 +52,7 @@ import { Repository } from "../../components/Repository";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { FreeMode } from "swiper/modules";
 
+import { addDateNames } from "../../api/Helpers";
 import "swiper/css";
 import "swiper/css/free-mode";
 export default {
@@ -88,7 +89,7 @@ export default {
         postData: {
           username: item.owner.login,
           avatarUrl: item.owner.avatar_url,
-          postDate: item.created_at,
+          postDate: addDateNames(item.created_at),
           issues: item.issue_comment_url,
         },
         repositoryData: {

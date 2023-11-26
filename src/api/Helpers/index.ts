@@ -1,1 +1,2 @@
-export * from "./formateDate/formateDate";
+export { addStartingZero } from "./formateDate/formateDate";
+export { addDateNames } from "./formateDate/formateDate";
