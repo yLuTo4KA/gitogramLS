@@ -28,6 +28,9 @@ h6 {
   font-size: inherit;
   font-weight: normal;
 }
+a {
+  color: inherit;
+}
 
 img {
   display: block;
@@ -49,9 +52,6 @@ li {
 
 button {
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .wrapper {

@@ -26,6 +26,14 @@ export default {
   overflow: hidden;
   width: 40px;
   height: 40px;
+  @media (max-width: 768px) {
+    width: 37px;
+    height: 37px;
+  }
+  @media (max-width: 376px) {
+    width: 24px;
+    height: 24px;
+  }
   & img {
     width: 100%;
     height: 100%;
