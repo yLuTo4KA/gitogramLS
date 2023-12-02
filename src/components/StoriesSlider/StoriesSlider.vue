@@ -65,7 +65,6 @@ export default {
     },
     async handleSlide(indexSlide) {
       if (indexSlide < this.trandPost.data.length) {
-        this.readyState = true;
         this.openSlide(indexSlide);
         await this.loadReadme();
       }
@@ -99,6 +98,9 @@ export default {
     await this.loadReadme();
   },
   async mounted() {
+    setTimeout(() => {
+      this.readyState = true;
+    }, 10);
     if (this.$route.params.openedSlide) {
       this.handleSlide(this.$route.params.openedSlide);
       this.$router.replace("/stories");
