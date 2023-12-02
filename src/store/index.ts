@@ -1,9 +1,8 @@
 import { createStore } from "vuex";
+import repositories from "./modules/repositories";
 
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    repositories,
+  },
 });

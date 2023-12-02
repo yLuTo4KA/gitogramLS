@@ -6,10 +6,10 @@
 
 <script lang="ts">
 export default {
-  data() {
-    return {
-      active: false,
-    };
+  props: {
+    active: {
+      type: Boolean,
+    },
   },
   emits: ["onFinish"],
   methods: {
@@ -18,16 +18,14 @@ export default {
     },
   },
   mounted() {
-    this.$nextTick(() => {
-      setTimeout(() => {
-        this.active = true;
-      }, 10);
-    });
-    this.$refs.indicator.addEventListener('transitionend', this.emitOnFinish);
+    this.$refs.indicator.addEventListener("transitionend", this.emitOnFinish);
   },
   beforeUnmount() {
-    this.$refs.indicator.removeEventListener('transitionend', this.emitOnFinish);
-  }
+    this.$refs.indicator.removeEventListener(
+      "transitionend",
+      this.emitOnFinish
+    );
+  },
 };
 </script>
 
@@ -46,11 +44,11 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    transition: width 5s linear;
   }
   &.active {
     .progress-bar__indicator {
       width: 100%;
+      transition: width 5s linear;
     }
   }
 }

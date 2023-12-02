@@ -8,10 +8,10 @@ export default {
   argType: {
     hoverText: {
       control: {
-        type: 'boolean'
-      }
-    }
-  }
+        type: "boolean",
+      },
+    },
+  },
 };
 
 export const defaultView = (args) => ({
@@ -21,7 +21,7 @@ export const defaultView = (args) => ({
   data() {
     return {
       isFollowing: false,
-    }
+    };
   },
   template: `
    <Button @click="isFollowing='!isFollowing'" :text="isFollowing ? 'Unfollow' : 'Follow'" />
@@ -34,9 +34,9 @@ export const miniButtonView = (args) => ({
   data() {
     return {
       isFollowing: false,
-    }
+    };
   },
   template: `
   <Button @click="isFollowing='!isFollowing'" :text="isFollowing ?'Unfollow' : 'Follow'" size="small" />
-  `
+  `,
 });

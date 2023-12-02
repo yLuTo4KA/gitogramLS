@@ -7,10 +7,10 @@ export default {
   },
   argTypes: {
     onFinish: {
-      action: 'onFinish',
+      action: "onFinish",
       description: "Finished",
-    }
-  }
+    },
+  },
 };
 
 export const defaultView = (args) => ({
@@ -19,12 +19,10 @@ export const defaultView = (args) => ({
   },
   data() {
     return {
-      args
-    }
+      args,
+    };
   },
   template: `
         <ProgressBar @onFinish="args.onFinish" />
     `,
 });
-
-

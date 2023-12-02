@@ -13,12 +13,13 @@
       >
         <SwiperSlide
           class="stories__item"
-          v-for="user in dbUsers"
+          v-for="(user, i) in trandPost.data"
           :key="user.id"
         >
           <User
-            :username="user.username"
-            :avatarUrl="user.avatar"
+            @click="routeTo(i)"
+            :username="user.owner.login"
+            :avatarUrl="user.owner.avatar_url"
             vClass="stories"
           />
         </SwiperSlide>
@@ -29,7 +30,7 @@
     <ul class="repositories__list">
       <li
         class="repositories__item"
-        v-for="user in responseData"
+        v-for="user in trandPost.data"
         :key="user.id"
       >
         <PostItem :postData="getFeedData(user).postData">
@@ -41,16 +42,17 @@
     </ul>
   </div>
 </template>
-<script lang="ts">
+<script>
 import { Topline } from "../../components/topline";
 import { Header } from "../../components/Header";
 import dbUsers from "./dbUsers.json";
 import { User } from "../../components/User";
-import * as api from "../../api";
 import { PostItem } from "../../components/PostItem";
 import { Repository } from "../../components/Repository";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { FreeMode } from "swiper/modules";
+
+import { mapState, mapActions, mapGetters, mapMutations } from "vuex";
 
 import { addDateNames } from "../../api/Helpers";
 import "swiper/css";
@@ -83,7 +85,13 @@ export default {
       modules: [FreeMode],
     };
   },
+  computed: {
+    ...mapState({
+      trandPost: (state) => state.repositories.trandPost,
+    }),
+  },
   methods: {
+    ...mapActions("repositories", ["getTrandRepo"]),
     getFeedData(item) {
       return {
         postData: {
@@ -102,14 +110,17 @@ export default {
         },
       };
     },
+    routeTo(index) {
+      this.$router.push({
+        name: "stories",
+        params: {
+          openedSlide: index,
+        },
+      });
+    },
   },
-  async created() {
-    try {
-      const { data } = await api.trandings.getTrandings();
-      this.responseData = data.items;
-    } catch (error) {
-      console.error(error);
-    }
+  created() {
+    this.getTrandRepo();
   },
 };
 </script>
@@ -153,6 +164,17 @@ export default {
     flex-direction: column;
     .repositories__item {
       margin-bottom: 25px;
+      &.--preloader {
+        width: 80%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 20px;
+        background-color: rgb(151, 151, 151);
+      }
     }
   }
 }

@@ -16,9 +16,10 @@
     <time datetime="" class="post__date">{{ postData.postDate }}</time>
   </div>
 </template>
-<script lang="ts">
+<script>
 import { User } from "../User";
 import { Issues } from "../Issues";
+
 export default {
   name: "PostItem",
   components: {

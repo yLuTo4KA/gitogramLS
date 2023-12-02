@@ -4,3 +4,7 @@ export { default as Exit } from "./Exit.vue";
 export { default as Arrow } from "./Arrow.vue";
 export { default as Star } from "./Star.vue";
 export { default as Fork } from "./Fork.vue";
+export { default as Close } from "./Close.vue";
+export { default as ArrowNext } from "./ArrowNext.vue";
+export { default as Loading } from "./Loading.vue";
+export { default as GitCat } from "./GitCat.vue";

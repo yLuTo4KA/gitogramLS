@@ -21,7 +21,7 @@ export const defaultView = () => ({
     <p>For running on Mac you'll currently use your favorite text editor and terminal to edit and run apps. We expect Visual Studio for Mac .NET 6 support to begin arriving mid-year.</p>
     <p>For running on Mac you'll currently use your favorite text editor and terminal to edit and run apps. We expect Visual Studio for Mac .NET 6 support to begin arriving mid-year.</p>
     `,
-    }
+    };
   },
   template: `
    <SlideItem :slideContent="content" username="2ytka2" avatarUrl="https://vertex-academy.com/tutorials/wp-content/uploads/2019/03/chto-takoe-git-1.jpg"/>

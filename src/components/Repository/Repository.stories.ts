@@ -14,11 +14,11 @@ export const defaultView = () => ({
   data() {
     return {
       repositoryData: {
-        "title": "Vue.js",
-        "text": "JavaScript framework for building interactive web applications ⚡",
-        "stats": {
-          "stars": 33,
-          "forks": 4
+        title: "Vue.js",
+        text: "JavaScript framework for building interactive web applications ⚡",
+        stats: {
+          stars: 33,
+          forks: 4,
         },
       },
     };
