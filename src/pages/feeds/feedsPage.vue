@@ -88,10 +88,14 @@ export default {
   computed: {
     ...mapState({
       trandPost: (state) => state.repositories.trandPost,
+      userData: (state) => state.auth.user,
     }),
   },
   methods: {
-    ...mapActions("repositories", ["getTrandRepo"]),
+    ...mapActions({
+      getTrandRepo: "repositories/getTrandRepo",
+      getUserData: "auth/getUserData",
+    }),
     getFeedData(item) {
       return {
         postData: {
@@ -119,8 +123,9 @@ export default {
       });
     },
   },
-  created() {
+  async created() {
     this.getTrandRepo();
+    console.log(await this.getUserData());
   },
 };
 </script>
