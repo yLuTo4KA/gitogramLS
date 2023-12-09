@@ -1,7 +1,7 @@
 <template>
   <div class="comment">
-    <div class="comment__username">{{ comment.username }}</div>
-    <div class="comment__text">{{ comment.text }}</div>
+    <div class="comment__username">{{ comment.user?.login }}</div>
+    <div class="comment__text">{{ comment.title }}</div>
   </div>
 </template>
 <script lang="ts">

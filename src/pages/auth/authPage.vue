@@ -47,9 +47,12 @@ export default {
     if (authCode !== null) {
       const token = await this.getToken(authCode);
       localStorage.setItem("token", token);
-      this.$router.replace("/");
     } else {
       return;
+    }
+    const user = await this.getUserData();
+    if (user) {
+      this.$router.replace({ name: "feedsPage" });
     }
   },
 };

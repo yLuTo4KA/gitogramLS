@@ -2,9 +2,13 @@
   <div class="c-issues">
     <Toggler togglerText="issues" @toggle="toggle" />
     <div class="comments" v-if="shown">
+      <div class="preloader" v-if="loading">
+        <PreloadRepo :preloadCount="3" />
+        <!-- Исправить перезагрузку у всех комментариев -->
+      </div>
       <ul class="comments__list">
-        <template v-for="comment in comments" :key="comment.id"
-          ><li class="comments__item" v-if="comment.id <= this.shownCount">
+        <template v-for="(comment, i) in comments" :key="i"
+          ><li class="comments__item" v-if="i <= this.shownCount - 1">
             <Comment :comment="comment" /></li
         ></template>
       </ul>
@@ -26,6 +30,9 @@
 <script>
 import { Toggler } from "../Toggler";
 import { Comment } from "../Comment";
+import { mapState } from "vuex";
+import PreloadRepo from "../PreloadRepo/PreloadRepo.vue";
+
 export default {
   name: "Issues",
   data() {
@@ -34,16 +41,26 @@ export default {
       shownCount: 3,
     };
   },
+  computed: {
+    ...mapState({
+      loading: (state) => state.starred.loading,
+    }),
+  },
   components: {
     Toggler,
     Comment,
+    PreloadRepo,
   },
   props: {
     comments: Array,
   },
+  emits: ["loadIssue"],
   methods: {
     toggle(isOpened) {
       this.shown = isOpened;
+      if (isOpened && this.comments.length === 0) {
+        this.$emit("loadIssue");
+      }
     },
     showAll() {
       this.shownCount = this.shownCount == 3 ? this.comments.length : 3;

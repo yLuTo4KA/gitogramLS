@@ -10,8 +10,8 @@
     <div class="post__content">
       <slot name="repository" />
     </div>
-    <div class="post__issues" v-if="postData.issues">
-      <Issues :comments="postData.issues" />
+    <div class="post__issues">
+      <Issues :comments="issues" @loadIssue="this.$emit('getIssue')" />
     </div>
     <time datetime="" class="post__date">{{ postData.postDate }}</time>
   </div>
@@ -31,7 +31,12 @@ export default {
       type: Object,
       required: true,
     },
+    issues: {
+      type: Array,
+      required: false,
+    },
   },
+  emits: ["getIssue"],
 };
 </script>
 <style lang="scss" scoped>

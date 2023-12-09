@@ -1,7 +1,7 @@
 <template>
   <Topline>
     <template #headline>
-      <Header :avatarUrl="loginnedUser.avatarUrl"></Header>
+      <Header v-if="user" :avatarUrl="user.avatar_url"></Header>
     </template>
     <template #content>
       <Swiper
@@ -30,12 +30,22 @@
     <ul class="repositories__list">
       <li
         class="repositories__item"
-        v-for="user in trandPost.data"
-        :key="user.id"
+        v-for="item in starredRepos"
+        :key="item.id"
       >
-        <PostItem :postData="getFeedData(user).postData">
+        <PostItem
+          :postData="getFeedData(item).postData"
+          :issues="item.issues ? item.issues : []"
+          @getIssue="
+            getIssues({
+              id: item.id,
+              owner: item.owner.login,
+              repo: item.name,
+            })
+          "
+        >
           <template #repository>
-            <Repository :repositoryData="getFeedData(user).repositoryData" />
+            <Repository :repositoryData="getFeedData(item).repositoryData" />
           </template>
         </PostItem>
       </li>
@@ -59,18 +69,6 @@ import "swiper/css";
 import "swiper/css/free-mode";
 export default {
   name: "feeds",
-  data() {
-    return {
-      dbUsers,
-      loginnedUser: {
-        id: 1293992,
-        username: "yLuTo4KA",
-        avatarUrl:
-          "https://sun9-14.userapi.com/impg/_tbr32K5b8enmy1zeQJtnApEq-STitZ_DZ2VTw/Eq_LzA9Ryds.jpg?size=1000x1000&quality=95&sign=841e637ee9a6209caccadfea9f1daef1&type=album",
-      },
-      responseData: [],
-    };
-  },
   components: {
     Topline,
     Header,
@@ -88,13 +86,17 @@ export default {
   computed: {
     ...mapState({
       trandPost: (state) => state.repositories.trandPost,
-      userData: (state) => state.auth.user,
+      user: (state) => state.auth.user,
+      issuesLoading: (state) => state.auth.loading,
+      starredRepos: (state) => state.starred.starredRepos,
     }),
   },
   methods: {
     ...mapActions({
       getTrandRepo: "repositories/getTrandRepo",
       getUserData: "auth/getUserData",
+      getStarredRepo: "starred/getStarredRepo",
+      getIssues: "starred/getIssues",
     }),
     getFeedData(item) {
       return {
@@ -102,7 +104,6 @@ export default {
           username: item.owner.login,
           avatarUrl: item.owner.avatar_url,
           postDate: addDateNames(item.created_at),
-          issues: item.issue_comment_url,
         },
         repositoryData: {
           title: item.name,
@@ -125,7 +126,14 @@ export default {
   },
   async created() {
     this.getTrandRepo();
-    console.log(await this.getUserData());
+    if (this.user === null) {
+      await this.getUserData();
+    }
+  },
+  async mounted() {
+    if (this.starredRepos === null) {
+      await this.getStarredRepo();
+    }
   },
 };
 </script>

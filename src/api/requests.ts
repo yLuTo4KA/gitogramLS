@@ -7,5 +7,8 @@ export const makeRequest = ({ url, method = "get", data = {}, headers = {} }) =>
     method,
     data,
     baseURL,
-    headers,
+    headers: {
+      ...headers,
+      Authorization: `token ${localStorage.getItem("token")}`,
+    },
   });
