@@ -31,5 +31,5 @@ export const getUserData = () =>
 
 export const logout = () => {
   localStorage.removeItem("token");
-  window.location.href = "/auth";
+  window.location.reload();
 };
