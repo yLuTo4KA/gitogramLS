@@ -28,3 +28,8 @@ export const getUserData = () =>
   makeRequest({
     url: "/user",
   });
+
+export const logout = () => {
+  localStorage.removeItem("token");
+  window.location.href = "/auth";
+};

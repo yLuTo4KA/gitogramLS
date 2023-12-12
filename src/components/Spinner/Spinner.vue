@@ -1,5 +1,5 @@
 <template>
-  <div class="spinner">
+  <div class="spinner" :class="theme">
     <Icon name="loading" />
   </div>
 </template>
@@ -10,6 +10,9 @@ export default {
   components: {
     Icon,
   },
+  props: {
+    theme: String,
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -19,6 +22,9 @@ export default {
   color: #31ae54;
   display: block;
   animation: rotate 1s linear infinite;
+}
+.white {
+  color: white;
 }
 @keyframes rotate {
   from {

@@ -16,7 +16,7 @@
           </button>
         </li>
         <li class="header__nav-item">
-          <button class="header__btn">
+          <button class="header__btn" @click="logoutUser">
             <Icon name="Exit" />
           </button>
         </li>
@@ -27,11 +27,17 @@
 <script lang="ts">
 import { Icon } from "../icons";
 import { Avatar } from "../Avatar";
+import { mapActions } from "vuex";
 export default {
   name: "Navbar",
   components: {
     Icon,
     Avatar,
+  },
+  methods: {
+    ...mapActions({
+      logoutUser: "auth/logoutUser",
+    }),
   },
   props: {
     avatarUrl: {

@@ -27,5 +27,8 @@ export default {
         console.log(e);
       }
     },
+    logoutUser() {
+      api.auth.logout();
+    },
   },
 };

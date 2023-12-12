@@ -4,9 +4,11 @@ export default {
   namespaced: true,
   state: {
     starredRepos: null,
-    loading: false,
   },
-  getters: {},
+  getters: {
+    getRepoById: (state) => (id) =>
+      state.starredRepos.find((item) => item.id == id),
+  },
   mutations: {
     setStarredRepo(state, payload) {
       state.starredRepos = payload;
@@ -14,13 +16,14 @@ export default {
     setIssuesRepo(state, payload) {
       state.starredRepos = state.starredRepos.map((item) => {
         if (item.id === payload.id) {
-          item.issues = payload.issues;
+          item.issues = { list: payload.issues, state: payload.state };
         }
         return item;
       });
     },
-    startLoading(state, payload) {
-      state.loading = payload;
+    removeStar(state, payload) {
+      const indexDel = state.starredRepos.indexOf(payload);
+      state.starredRepos.splice(indexDel, 1);
     },
   },
   actions: {
@@ -33,11 +36,11 @@ export default {
       }
     },
     async getIssues({ commit }, { id, owner, repo }) {
-      commit("startLoading", true);
+      commit("setIssuesRepo", { id, issues: [], state: true });
       try {
         const { data } = await api.issues.getIssues({ owner, repo });
         if (data.length !== 0) {
-          commit("setIssuesRepo", { id, issues: data });
+          commit("setIssuesRepo", { id, issues: data, state: false });
         } else {
           commit("setIssuesRepo", {
             id,
@@ -46,12 +49,32 @@ export default {
                 title: "No issues",
               },
             ],
+            state: false,
           });
         }
       } catch (e) {
+        commit("setIssuesRepo", {
+          id,
+          issues: [
+            {
+              title: "Error loading",
+            },
+          ],
+          state: false,
+        });
+        throw e;
+      }
+    },
+    async removeStar({ commit, getters }, id) {
+      const currentRepo = getters.getRepoById(id);
+      try {
+        await api.starred.deleteLikeRepo({
+          owner: currentRepo.owner.login,
+          repo: currentRepo.name,
+        });
+        commit("removeStar", currentRepo);
+      } catch (e) {
         console.log(e);
-      } finally {
-        commit("startLoading", false);
       }
     },
   },

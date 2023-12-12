@@ -1,7 +1,8 @@
 <template>
   <button :class="['btn', bg, size]">
     <div class="btn__text">
-      <p>{{ text }}</p>
+      <p v-if="!loading">{{ text }}</p>
+      <Spinner v-else theme="white" />
     </div>
     <div class="btn__icon" v-if="icon">
       <Icon :name="icon" />
@@ -10,10 +11,12 @@
 </template>
 <script lang="ts">
 import { Icon } from "../icons";
+import Spinner from "../Spinner/Spinner.vue";
 export default {
   name: "Button",
   components: {
     Icon,
+    Spinner,
   },
   props: {
     bg: {
@@ -32,6 +35,9 @@ export default {
     icon: {
       type: String,
       required: false,
+    },
+    loading: {
+      type: Boolean,
     },
   },
 };
@@ -53,6 +59,12 @@ export default {
     background-color: #31ae54;
     &:hover {
       background-color: #9e9e9e;
+    }
+  }
+  &.grey {
+    background-color: #9e9e9e;
+    &:hover {
+      background-color: #31ae54;
     }
   }
   &.small {

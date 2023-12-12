@@ -35,26 +35,13 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to, from, next) => {
+  const authRoute = to.name == "authPage";
   const token = localStorage.getItem("token");
-
-  if (token === null && to.name !== "authPage") {
-    next({ name: "authPage" });
-    return;
-  }
   if (token !== null) {
-    const response = await api.auth.getUserData();
-    if (response.status === 200) {
-      if (to.name === "authPage") {
-        next({ name: "feedsPage" });
-        return;
-      }
-    } else {
-      localStorage.removeItem("token");
-      next({ name: "authPage" });
-      window.location.reload();
-    }
+    next(authRoute ? { name: "feedsPage" } : null);
+  } else {
+    next(authRoute ? null : { name: "authPage" });
   }
-  next();
 });
 
 export default router;

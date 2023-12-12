@@ -2,24 +2,23 @@
   <div class="c-issues">
     <Toggler togglerText="issues" @toggle="toggle" />
     <div class="comments" v-if="shown">
-      <div class="preloader" v-if="loading">
+      <div class="preloader" v-if="comments.state">
         <PreloadRepo :preloadCount="3" />
-        <!-- Исправить перезагрузку у всех комментариев -->
       </div>
-      <ul class="comments__list">
-        <template v-for="(comment, i) in comments" :key="i"
+      <ul class="comments__list" v-else>
+        <template v-for="(comment, i) in comments.list" :key="i"
           ><li class="comments__item" v-if="i <= this.shownCount - 1">
             <Comment :comment="comment" /></li
         ></template>
       </ul>
       <button
         class="comments__show"
-        v-if="comments.length > 3"
+        v-if="comments.list.length > 3"
         @click="showAll"
       >
         {{
           this.shownCount == 3
-            ? "Show all " + comments.length + " issues"
+            ? "Show all " + comments.list.length + " issues"
             : "Hide issues"
         }}
       </button>
@@ -30,7 +29,6 @@
 <script>
 import { Toggler } from "../Toggler";
 import { Comment } from "../Comment";
-import { mapState } from "vuex";
 import PreloadRepo from "../PreloadRepo/PreloadRepo.vue";
 
 export default {
@@ -40,11 +38,6 @@ export default {
       shown: false,
       shownCount: 3,
     };
-  },
-  computed: {
-    ...mapState({
-      loading: (state) => state.starred.loading,
-    }),
   },
   components: {
     Toggler,
@@ -63,7 +56,7 @@ export default {
       }
     },
     showAll() {
-      this.shownCount = this.shownCount == 3 ? this.comments.length : 3;
+      this.shownCount = this.shownCount == 3 ? this.comments.list.length : 3;
     },
   },
 };

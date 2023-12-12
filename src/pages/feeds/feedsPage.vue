@@ -45,7 +45,14 @@
           "
         >
           <template #repository>
-            <Repository :repositoryData="getFeedData(item).repositoryData" />
+            <Repository
+              :repositoryData="getFeedData(item).repositoryData"
+              @removeStar="
+                () => {
+                  removeStar(item.id), getTrandRepo();
+                }
+              "
+            />
           </template>
         </PostItem>
       </li>
@@ -62,7 +69,7 @@ import { Repository } from "../../components/Repository";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { FreeMode } from "swiper/modules";
 
-import { mapState, mapActions, mapGetters, mapMutations } from "vuex";
+import { mapState, mapActions, mapGetters } from "vuex";
 
 import { addDateNames } from "../../api/Helpers";
 import "swiper/css";
@@ -85,18 +92,22 @@ export default {
   },
   computed: {
     ...mapState({
-      trandPost: (state) => state.repositories.trandPost,
+      trandPost: (state) => state.trandings.trandPost,
       user: (state) => state.auth.user,
       issuesLoading: (state) => state.auth.loading,
       starredRepos: (state) => state.starred.starredRepos,
     }),
+    ...mapGetters({
+      getUnstarredRepo: "getUnstarredRepo",
+    }),
   },
   methods: {
     ...mapActions({
-      getTrandRepo: "repositories/getTrandRepo",
+      getTrandRepo: "trandings/getTrandRepo",
       getUserData: "auth/getUserData",
       getStarredRepo: "starred/getStarredRepo",
       getIssues: "starred/getIssues",
+      removeStar: "starred/removeStar",
     }),
     getFeedData(item) {
       return {
@@ -125,15 +136,13 @@ export default {
     },
   },
   async created() {
-    this.getTrandRepo();
     if (this.user === null) {
       await this.getUserData();
     }
   },
   async mounted() {
-    if (this.starredRepos === null) {
-      await this.getStarredRepo();
-    }
+    await this.getStarredRepo();
+    this.getTrandRepo();
   },
 };
 </script>

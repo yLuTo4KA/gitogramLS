@@ -1,6 +1,6 @@
 <template>
   <div class="controls">
-    <button class="btn">
+    <button class="btn" @click="$emit('removeStar')">
       <div class="btn__icon star">
         <Icon name="Star" />
       </div>
@@ -24,6 +24,7 @@ export default {
   components: {
     Icon,
   },
+  emits: ["removeStar"],
   props: {
     repoStats: {
       type: Object,

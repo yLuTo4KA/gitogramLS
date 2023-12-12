@@ -27,7 +27,14 @@
         </div>
       </div>
       <div class="slide__footer">
-        <Button text="Follow" bg="green" />
+        <Button
+          :loading="data.following.loading"
+          :text="data.following.status ? 'Unfollow' : 'Follow'"
+          :bg="data.following.status ? 'grey' : 'green'"
+          @click="
+            $emit(data.following.status ? 'onUnFollow' : 'onFollow', data.id)
+          "
+        />
       </div>
     </div>
     <template v-if="active">
@@ -71,7 +78,7 @@ export default {
     Spinner,
     Preloader,
   },
-  emits: ["onPrevSlider", "onNextSlide"],
+  emits: ["onPrevSlider", "onNextSlide", "onFollow", "onUnFollow"],
   props: {
     data: {
       type: Object,

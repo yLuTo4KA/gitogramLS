@@ -5,7 +5,10 @@
       <p>{{ repositoryData.text }}</p>
     </div>
     <div class="repository__controls">
-      <Controls :repoStats="repositoryData.stats" />
+      <Controls
+        :repoStats="repositoryData.stats"
+        @removeStar="$emit('removeStar')"
+      />
     </div>
   </div>
 </template>
@@ -16,6 +19,7 @@ export default {
   components: {
     Controls,
   },
+  emits: ["removeStar"],
   props: {
     repositoryData: {
       type: Object,

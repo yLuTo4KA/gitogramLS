@@ -16,6 +16,8 @@
             :loading="slideNdx == ndx && loading"
             @onPrevSlide="handleSlide(ndx - 1)"
             @onNextSlide="handleSlide(ndx + 1)"
+            @onFollow="starRepo(story.id)"
+            @onUnFollow="unStarRepo(story.id)"
           />
         </li>
       </ul>
@@ -25,7 +27,7 @@
 
 <script>
 import { SlideItem } from "../SlideItem";
-import { mapState, mapActions } from "vuex";
+import { mapState, mapActions, mapGetters } from "vuex";
 
 export default {
   data() {
@@ -41,7 +43,10 @@ export default {
   },
   computed: {
     ...mapState({
-      trandPost: (state) => state.repositories.trandPost,
+      trandPost: (state) => state.trandings.trandPost,
+    }),
+    ...mapGetters({
+      getUnstarredRepo: "getUnstarredRepo",
     }),
     activeBtns() {
       if (this.btnsShown == false) return [];
@@ -52,8 +57,10 @@ export default {
   },
   methods: {
     ...mapActions({
-      getTrandRepo: "repositories/getTrandRepo",
-      getReadme: "repositories/getReadme",
+      getTrandRepo: "trandings/getTrandRepo",
+      getReadme: "trandings/getReadme",
+      starRepo: "trandings/starRepo",
+      unStarRepo: "trandings/unStarRepo",
     }),
     getStoryData(obj) {
       return {
@@ -61,6 +68,7 @@ export default {
         userAvatar: obj.owner?.avatar_url,
         username: obj.owner?.login,
         content: obj.readme,
+        following: obj.following,
       };
     },
     async handleSlide(indexSlide) {
