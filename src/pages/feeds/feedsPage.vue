@@ -52,6 +52,7 @@
                   removeStar(item.id), getTrandRepo();
                 }
               "
+              :status="true"
             />
           </template>
         </PostItem>

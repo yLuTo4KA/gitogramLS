@@ -1,7 +1,7 @@
 <template>
   <div class="controls">
     <button class="btn" @click="$emit('removeStar')">
-      <div class="btn__icon star">
+      <div class="btn__icon star" :class="[{ starred }]">
         <Icon name="Star" />
       </div>
       <div class="btn__title">Star</div>
@@ -29,6 +29,9 @@ export default {
     repoStats: {
       type: Object,
       required: true,
+    },
+    starred: {
+      type: Boolean,
     },
   },
 };
@@ -60,6 +63,9 @@ export default {
     padding: 0 10px;
     border-right: 1px solid #1b1f232a;
     border-left: 1px solid #1b1f232a;
+    .starred {
+      color: #31ae54;
+    }
     &:hover {
       .btn__icon {
         color: #31ae54;

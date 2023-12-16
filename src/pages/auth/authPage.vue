@@ -1,6 +1,6 @@
 <template>
   <div class="auth">
-    <div class="x-container">
+    <div class="container">
       <div class="auth__wrapper">
         <div class="auth__info">
           <div class="auth__logo">
@@ -92,5 +92,12 @@ export default {
     position: absolute;
     bottom: 0;
   }
+}
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 </style>

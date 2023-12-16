@@ -65,6 +65,16 @@ export default {
         throw e;
       }
     },
+    async addStar({ commit }, { owner, repo }) {
+      try {
+        await api.starred.putLikeRepo({
+          owner: owner,
+          repo: repo,
+        });
+      } catch (e) {
+        console.log(e);
+      }
+    },
     async removeStar({ commit, getters }, id) {
       const currentRepo = getters.getRepoById(id);
       try {

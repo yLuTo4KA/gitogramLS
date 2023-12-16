@@ -29,6 +29,23 @@ export const getUserData = () =>
     url: "/user",
   });
 
+export const getUserRepos = () =>
+  makeRequest({
+    url: "/user/repos",
+  });
+export const getUserFollowing = () =>
+  makeRequest({
+    url: "/user/following",
+  });
+export const unFollowUser = (username) =>
+  makeRequest({
+    method: "DELETE",
+    url: `/user/following/${username}`,
+  });
+export const isStarred = (owner, repo) =>
+  makeRequest({
+    url: `/user/starred/${owner}/${repo}`,
+  });
 export const logout = () => {
   localStorage.removeItem("token");
   window.location.reload();

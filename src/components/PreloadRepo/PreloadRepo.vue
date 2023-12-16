@@ -1,5 +1,5 @@
 <template>
-  <div class="preloader">
+  <div class="preloader" :class="type">
     <div
       class="preloader__content"
       v-for="item in preloadCount"
@@ -14,6 +14,10 @@ export default {
     preloadCount: {
       type: Number,
       default: 1,
+    },
+    type: {
+      type: String,
+      required: false,
     },
   },
 };
@@ -48,6 +52,12 @@ export default {
     }
     &:nth-child(odd) {
       width: 40%;
+    }
+  }
+  &.information {
+    height: 35px;
+    .preloader__content {
+      width: 100%;
     }
   }
 }

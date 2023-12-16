@@ -69,4 +69,14 @@ export default {
   width: 32px;
   height: 32px;
 }
+
+.profile {
+  width: 90px;
+  height: 90px;
+}
+.following {
+  width: 72px;
+  height: 72px;
+  margin-right: 20px;
+}
 </style>

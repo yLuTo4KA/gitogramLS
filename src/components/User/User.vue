@@ -5,6 +5,7 @@
     </div>
     <div class="user__username">
       <p>{{ username }}</p>
+      <slot name="desc" />
     </div>
   </div>
 </template>
@@ -65,5 +66,9 @@ export default {
       font-weight: 700;
     }
   }
+}
+.following {
+  font-size: 18px;
+  font-weight: 500;
 }
 </style>

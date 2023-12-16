@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -76,6 +76,7 @@ button {
 
 .x-container {
   max-width: 1200px;
+  height: 100%;
   padding: 0 10px;
   width: 100%;
   margin: 0 auto;

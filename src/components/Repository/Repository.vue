@@ -8,6 +8,7 @@
       <Controls
         :repoStats="repositoryData.stats"
         @removeStar="$emit('removeStar')"
+        :starred="status"
       />
     </div>
   </div>
@@ -25,6 +26,7 @@ export default {
       type: Object,
       required: true,
     },
+    status: Boolean,
   },
 };
 </script>
@@ -35,6 +37,7 @@ export default {
   box-shadow: 0px 4px 40px 0px #00000012;
   border-radius: 10px;
   word-wrap: break-word;
+  width: 100%;
   &__title {
     margin-bottom: 15px;
     font-size: 26px;

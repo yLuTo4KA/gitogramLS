@@ -1,17 +1,23 @@
 <template>
   <header class="header">
-    <button class="header__logo">
+    <button class="header__logo" @click="$router.push({ name: 'feedsPage' })">
       <Icon name="Logo" />
     </button>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <button class="header__btn">
+          <button
+            class="header__btn"
+            @click="$router.push({ name: 'feedsPage' })"
+          >
             <Icon name="Home" />
           </button>
         </li>
         <li class="header__nav-item">
-          <button class="header__btn header__btn--avatar">
+          <button
+            class="header__btn header__btn--avatar"
+            @click="$router.push({ name: 'repositories' })"
+          >
             <Avatar :avatarUrl="avatarUrl" />
           </button>
         </li>

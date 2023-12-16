@@ -5,7 +5,7 @@
       <Spinner v-else theme="white" />
     </div>
     <div class="btn__icon" v-if="icon">
-      <Icon :name="icon" />
+      <Icon :name="icon" class="btn-icon" />
     </div>
   </button>
 </template>
@@ -70,15 +70,13 @@ export default {
   &.small {
     width: 115px;
   }
-  &__text {
-    margin-right: 12px;
-  }
   &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 24px;
+    margin-left: 12px;
   }
 }
 </style>
