@@ -2,23 +2,23 @@
   <div class="c-issues">
     <Toggler togglerText="issues" @toggle="toggle" />
     <div class="comments" v-if="shown">
-      <div class="preloader" v-if="comments.state">
+      <div class="preloader" v-if="comments?.state">
         <PreloadRepo :preloadCount="3" />
       </div>
       <ul class="comments__list" v-else>
-        <template v-for="(comment, i) in comments.list" :key="i"
+        <template v-for="(comment, i) in comments?.list" :key="i"
           ><li class="comments__item" v-if="i <= this.shownCount - 1">
             <Comment :comment="comment" /></li
         ></template>
       </ul>
       <button
         class="comments__show"
-        v-if="comments.list.length > 3"
+        v-if="comments?.list?.length > 3"
         @click="showAll"
       >
         {{
           this.shownCount == 3
-            ? "Show all " + comments.list.length + " issues"
+            ? "Show all " + comments?.list.length + " issues"
             : "Hide issues"
         }}
       </button>
@@ -45,18 +45,18 @@ export default {
     PreloadRepo,
   },
   props: {
-    comments: Array,
+    comments: Object,
   },
   emits: ["loadIssue"],
   methods: {
     toggle(isOpened) {
       this.shown = isOpened;
-      if (isOpened && this.comments.length === 0) {
+      if (isOpened && !this.comments?.list) {
         this.$emit("loadIssue");
       }
     },
     showAll() {
-      this.shownCount = this.shownCount == 3 ? this.comments.list.length : 3;
+      this.shownCount = this.shownCount == 3 ? this.comments?.list.length : 3;
     },
   },
 };

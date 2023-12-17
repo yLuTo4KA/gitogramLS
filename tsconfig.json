@@ -26,7 +26,8 @@
     "src/**/*.vue",
     "src/**/*.json",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
-, "src/components/Toggler/Toggler.spec.js"  ],
+    "tests/**/*.tsx",
+    "src/components/Toggler/Toggler.spec.js"
+  ],
   "exclude": ["node_modules"]
 }

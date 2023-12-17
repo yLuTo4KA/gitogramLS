@@ -4,6 +4,7 @@
     <div class="repository__desc">
       <p>{{ repositoryData.text }}</p>
     </div>
+    <!-- <Markdown :source="repositoryData.text" class="repository__desc" /> -->
     <div class="repository__controls">
       <Controls
         :repoStats="repositoryData.stats"
@@ -15,6 +16,7 @@
 </template>
 <script lang="ts">
 import { Controls } from "../Controls";
+
 export default {
   name: "Repository",
   components: {

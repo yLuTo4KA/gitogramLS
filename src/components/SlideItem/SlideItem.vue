@@ -18,11 +18,17 @@
           <Spinner />
         </div>
         <div class="slide__content-view" v-else>
-          <div
+          <!-- <div
             class="slide__content-text"
             v-if="data?.content?.length"
             v-html="data.content"
-          ></div>
+          ></div> -->
+          <Markdown
+            :source="data.content"
+            class="slide__content-text"
+            v-if="data?.content?.length"
+            :html="true"
+          />
           <Preloader :paragraphs="2" v-else />
         </div>
       </div>
@@ -67,6 +73,7 @@ import { Button } from "../Button";
 import { Icon } from "../icons";
 import Spinner from "../Spinner/Spinner.vue";
 import Preloader from "../Preloader/Preloader.vue";
+import Markdown from "vue3-markdown-it";
 
 export default {
   name: "SlideItem",
@@ -77,6 +84,7 @@ export default {
     Button,
     Spinner,
     Preloader,
+    Markdown,
   },
   emits: ["onPrevSlider", "onNextSlide", "onFollow", "onUnFollow"],
   props: {

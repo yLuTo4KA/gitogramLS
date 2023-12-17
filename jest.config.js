@@ -1,17 +1,10 @@
-// jest.config.js
 module.exports = {
-  moduleFileExtensions: [
-    "js",
-    "json",
-    "vue"
-  ],
-  preset: '@vue/cli-plugin-unit-jest',
+  moduleFileExtensions: ["js", "json", "ts", "vue"],
+  preset: "@vue/cli-plugin-unit-jest/presets/typescript",
   transform: {
-    '^.+\\.vue$': 'vue-jest',
-    '^.+\\.js$': 'babel-jest'
+    "^.+\\.vue$": "@vue/vue3-jest",
+    "^.+\\.js$": "babel-jest",
+    "^.+\\.ts$": "ts-jest",
   },
-  testMatch: [
-    "**/__tests__/**/*.[jt]s?(x)",
-    "**/(*.)+(spec|test).[jt]s?(x)"
-  ]
+  testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/(*.)+(spec|test).[jt]s?(x)"],
 };

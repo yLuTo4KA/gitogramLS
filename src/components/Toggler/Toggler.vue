@@ -28,7 +28,8 @@ export default {
   props: {
     togglerText: {
       type: String,
-      required: true,
+      required: false,
+      default: "",
     },
   },
   methods: {

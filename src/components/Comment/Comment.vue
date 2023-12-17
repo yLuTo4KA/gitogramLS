@@ -1,6 +1,6 @@
 <template>
   <div class="comment">
-    <div class="comment__username">{{ comment.user?.login }}</div>
+    <div class="comment__username">{{ comment?.user?.login }}</div>
     <div class="comment__text">{{ comment.title }}</div>
   </div>
 </template>
