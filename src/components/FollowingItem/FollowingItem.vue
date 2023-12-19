@@ -62,5 +62,8 @@ export default {
   color: #9e9e9e;
   margin-top: 5px;
   font-weight: 400;
+  @media screen and (max-width: 376px) {
+    font-size: 10px;
+  }
 }
 </style>

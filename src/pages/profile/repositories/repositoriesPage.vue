@@ -67,6 +67,9 @@ onMounted(() => {
   margin-bottom: 25px;
   &:last-child {
     margin-bottom: 125px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 250px;
+    }
   }
 }
 </style>

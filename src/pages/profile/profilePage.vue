@@ -4,10 +4,22 @@
       <template #headline>
         <Header :avatar-url="user?.avatar_url" />
       </template>
+      <template #content>
+        <ProfileCard
+          class="profile__info-card profile__info-card--ipad --ipad"
+          :userInfo="{
+            avatarUrl: user?.avatar_url,
+            login: user?.login,
+            repos: user?.public_repos,
+            following: user?.following,
+            name: user?.name,
+          }"
+        />
+      </template>
     </Topline>
     <div class="x-container">
       <div class="profile">
-        <div class="profile__info">
+        <div class="profile__info --desktop">
           <h2 class="profile__info-title">My profile</h2>
           <ProfileCard
             class="profile__info-card"
@@ -62,6 +74,9 @@ console.log(user);
     padding: 40px 0;
     &-card {
       margin-right: 10px;
+      &--ipad {
+        margin-bottom: 40px;
+      }
     }
     &-title {
       font-size: 26px;
@@ -71,6 +86,17 @@ console.log(user);
   }
   &__content {
     flex: 2;
+  }
+}
+.--ipad {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .--ipad {
+    display: flex;
+  }
+  .--desktop {
+    display: none;
   }
 }
 </style>

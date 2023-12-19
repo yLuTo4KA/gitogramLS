@@ -70,5 +70,8 @@ export default {
 .following {
   font-size: 18px;
   font-weight: 500;
+  @media screen and (max-width: 376px) {
+    font-size: 14px;
+  }
 }
 </style>

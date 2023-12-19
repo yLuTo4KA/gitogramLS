@@ -78,5 +78,15 @@ export default {
   width: 72px;
   height: 72px;
   margin-right: 20px;
+  @media screen and (max-width: 768px) {
+    width: 66px;
+    height: 66px;
+    margin-right: 15px;
+  }
+  @media screen and (max-width: 376px) {
+    width: 56px;
+    height: 56px;
+    margin-right: 15px;
+  }
 }
 </style>

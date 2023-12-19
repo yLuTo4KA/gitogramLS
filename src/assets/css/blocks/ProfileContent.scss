@@ -26,3 +26,12 @@
 .content__list {
   flex-direction: column;
 }
+
+@media screen  and (max-width: 768px){
+  .profile-content {
+    padding-left: 20px;
+  }
+  .content__header {
+    display: none;
+  }
+}

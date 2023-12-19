@@ -91,6 +91,37 @@ export default {
     padding: 32px 0;
     position: absolute;
     bottom: 0;
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .auth {
+    justify-content: flex-start;
+    padding-top: 225px;
+    background: url("../../assets/authbg-ipad.png") center bottom 0% / 80%
+      no-repeat;
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    &__footer {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 468px) {
+  .auth {
+    justify-content: flex-end;
+    padding-bottom: 100px;
+    background: url("../../assets/authbg-iphone.png") center top 5% / 80%
+      no-repeat;
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    &__footer {
+      display: none;
+    }
   }
 }
 .container {

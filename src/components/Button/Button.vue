@@ -69,6 +69,16 @@ export default {
   }
   &.small {
     width: 115px;
+    @media screen and (max-width: 768px) {
+      width: 128px;
+      height: 36px;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 376px) {
+      width: 94px;
+      height: 30px;
+      font-size: 12px;
+    }
   }
   &__icon {
     display: flex;

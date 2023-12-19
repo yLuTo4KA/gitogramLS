@@ -197,4 +197,20 @@ template {
     height: 18px;
   }
 }
+@media screen and (max-width: 376px) {
+  .slide {
+    &__content {
+      font-size: 12px;
+      padding: 15px 35px 30px 35px;
+    }
+  }
+  .arrow {
+    &__prev {
+      left: -25px;
+    }
+    &__next {
+      right: -25px;
+    }
+  }
+}
 </style>

@@ -126,10 +126,13 @@ export default {
   &__stories-list {
     position: absolute;
     left: 50%;
-    margin-left: -188px;
+    margin-left: -150px;
     display: flex;
     align-items: center;
     transition: 0.5s;
+    @media screen and (max-width: 376px) {
+      padding-top: 55px;
+    }
   }
 }
 </style>
